@@ -1,0 +1,160 @@
+/*
+* Fluid Skeleton 
+* Based on Skeleton, Dave Gamache
+* www.getskeleton.com
+* Butchered by Ian Yates
+* http://webdesign.tutsplus.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+*/
+
+
+/* apply a natural box layout model to all elements */
+.pricingcontainer * { 
+-moz-box-sizing: border-box; 
+-webkit-box-sizing: border-box; 
+box-sizing: border-box;
+}
+
+/* Flexible Column Widths - mobile first
+================================================== */
+
+    	.pricingcontainer                                  { position: relative; width: 100%; margin: 0 auto; padding: 0; margin: 0;}
+		.pricingcontainer dl                               { margin-bottom: 0; margin-top: 0; }
+		.pricingcontainer dl.plan                               { margin-bottom: 25px }
+		.pricingcontainer dd                               { margin-left: 0; }
+        .pricingcontainer .columns 						{ float: left; display: inline; padding-left: 4px; padding-right: 4px; }
+
+        .pricingcontainer .one.column,
+        .pricingcontainer .one.columns,
+        .pricingcontainer .two.columns,
+        .pricingcontainer .three.columns,
+        .pricingcontainer .four.columns,
+        .pricingcontainer .five.columns,
+        .pricingcontainer .six.columns,
+        .pricingcontainer .seven.columns,
+        .pricingcontainer .eight.columns,
+        .pricingcontainer .nine.columns,
+        .pricingcontainer .ten.columns,
+        .pricingcontainer .eleven.columns,
+        .pricingcontainer .twelve.columns,
+        .pricingcontainer .thirteen.columns,
+        .pricingcontainer .fourteen.columns,
+        .pricingcontainer .fifteen.columns,
+        .pricingcontainer .sixteen.columns,
+        .pricingcontainer .one-third.column,
+        .pricingcontainer .two-thirds.column  				{ width: 100%; }
+
+        /* Offsets */
+        .pricingcontainer .offset-by-one,
+        .pricingcontainer .offset-by-two,
+        .pricingcontainer .offset-by-three,
+        .pricingcontainer .offset-by-four,
+        .pricingcontainer .offset-by-five,
+        .pricingcontainer .offset-by-six,
+        .pricingcontainer .offset-by-seven,
+        .pricingcontainer .offset-by-eight,
+        .pricingcontainer .offset-by-nine,
+        .pricingcontainer .offset-by-ten,
+        .pricingcontainer .offset-by-eleven,
+        .pricingcontainer .offset-by-twelve,
+        .pricingcontainer .offset-by-thirteen,
+        .pricingcontainer .offset-by-fourteen,
+        .pricingcontainer .offset-by-fifteen 				{ padding-left: 0; }
+        
+ 
+ /* #getting bigger - breakpoint tablets
+================================================== */       
+    @media only screen and (min-width: 480px) {      
+            
+        .pricingcontainer                                  { }
+        
+	}         
+        
+ /* #getting bigger - breakpoint beyond tablets portrait
+================================================== */       
+    @media only screen and (min-width: 767px) {
+    
+        .pricingcontainer .columns                         { padding-left: 0px; padding-right: 0px;}
+ 
+        .pricingcontainer .one.columns                     { width: 100%; }
+        .pricingcontainer .two.columns                     { width: 50%; }
+        .pricingcontainer .three.columns                   { width: 33.33333333%; }
+        .pricingcontainer .four.columns                    { width: 25%; }
+        .pricingcontainer .five.columns                    { width: 20%; }
+ 
+        /* Offsets */
+        .pricingcontainer .offset-by-one                   { padding-left: 6.25%; }
+        .pricingcontainer .offset-by-two                   { padding-left: 12.5%; }
+        .pricingcontainer .offset-by-three                 { padding-left: 18.75%; }
+        .pricingcontainer .offset-by-four                  { padding-left: 25%; }
+        .pricingcontainer .offset-by-five                  { padding-left: 31.25%; }
+        .pricingcontainer .offset-by-six                   { padding-left: 37.5%; }
+        .pricingcontainer .offset-by-seven                 { padding-left: 43.75%; }
+        .pricingcontainer .offset-by-eight                 { padding-left: 50%; }
+        .pricingcontainer .offset-by-nine                  { padding-left: 56.25%; }
+        .pricingcontainer .offset-by-ten                   { padding-left: 62.5%; }
+        .pricingcontainer .offset-by-eleven                { padding-left: 68.75%; }
+        .pricingcontainer .offset-by-twelve                { padding-left: 75%; }
+        .pricingcontainer .offset-by-thirteen              { padding-left: 81.25%; }
+        .pricingcontainer .offset-by-fourteen              { padding-left: 87.5%; }
+        .pricingcontainer .offset-by-fifteen               { padding-left: 93.75%; }
+
+        }
+        
+
+
+/* #Clearing
+================================================== */
+
+    /* Self Clearing Goodness */
+    .pricingcontainer:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+    /* Use clearfix class on parent to clear nested columns,
+    or wrap each row of columns in a <div class="row"> */
+    .clearfix:before,
+    .clearfix:after,
+    .row:before,
+    .row:after {
+      content: '\0020';
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0; }
+    .row:after,
+    .clearfix:after {
+      clear: both; }
+    .row,
+    .clearfix {
+      zoom: 1; }
+
+    /* You can also use a <br class="clear" /> to clear columns */
+    .clear {
+      clear: both;
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+/*    
+.plans.recommended_plans {
+	position: relative;	
+}
+.plan_title.recommended_plan_title::after {
+	content: "\f02e";
+font-family: FontAwesome;
+font-weight: normal;
+font-size: 14px;
+width: 20px;
+text-align: left;
+font-style: normal;
+display: inline-block;
+text-decoration: inherit;	
+position: absolute;
+top: 0px;
+right: 17px;
+color: #FF993A;
+font-size: 33px;
+}*/

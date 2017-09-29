@@ -1,0 +1,220 @@
+.plan_features:nth-child(odd){
+    background: none repeat scroll 0 0 #FAFAFA;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 10px 5px;
+
+
+}
+.plan_features:nth-child(even){
+    background: none repeat scroll 0 0 #fff;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 10px 5px;
+}
+.plan_price{
+
+    color:#26bdef;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 30px;
+    text-align: center;background-color: #F5F5F5;
+border-bottom: 1px solid #F5F5F5;
+}
+
+.plan_title{
+    background: none repeat scroll 0 0 #555;
+    color: #FFFFFF;
+    font-family: helvetica;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+}
+
+.plan_title.recommended_plan_title {
+background-color: #26bdef;
+padding-top: 30px;
+margin-top: -5px;
+}
+
+.plan{
+    margin-bottom: 15px;
+}
+.plan_buy{
+    border-radius: 0 0 3px 3px;
+    padding: 20px;
+	background-color: #F5F5F5;
+border-top: 1px solid #EBEBEB;
+}
+.plan_buy a{
+    border-radius: 4px 4px 4px 4px;
+
+    display: block;
+    margin: auto;
+    padding: 10px 5px;
+    text-align: center;
+    text-decoration: none;
+    width: 90px;
+	color: #fff;
+	background-color: #26bdef;
+}
+.plan_buy a:hover{
+	color: #ddd;	
+}
+
+.plan_buy.recommended_plan_title a:hover {
+	
+}
+.plan_more{
+    background: none repeat scroll 0 0 #fff;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 10px 5px;
+    display: none;
+}
+.more_icon{
+    background-image: url("../plus_minus_icons.png");
+    background-position: 25px -3px;
+    float: right;
+    height: 25px;
+    width: 25px;
+}
+
+.more_icon:hover{
+    cursor: pointer;
+}
+.less_icon{
+    background-image: url("../plus_minus_icons.png");
+    background-position: 0px -3px;
+    float: right;
+    height: 25px;
+    width: 25px;
+}
+.less_icon:hover{
+    cursor: pointer;
+}
+
+
+.plan_features img{
+    float:left;
+}
+.feature_desc{
+    color: #4E4E4E;
+    font-family: arial;
+    text-align: center;
+}
+
+.pricinghighlight{
+    color: #333233;
+    font-family: helvetica;
+    font-weight: normal;
+}
+
+/* #Tablet (Portrait)
+================================================== */
+
+/* Note: Design for a width of 768px */
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+
+}
+
+/*  #Mobile (Portrait)
+================================================== */
+
+/* Note: Design for a width of 320px */
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .plan_title{
+        width:45%;
+        float:left;
+        border-radius:3px 0 0 0;
+    }
+    .plan_price{
+        width:55%;
+        padding:20px 2%;
+        border-top:none !important;
+        float:left;
+
+    }  
+
+    .plan_more{
+        display: block;
+        clear: both;
+    }
+    .plan_buy{
+        padding: 10px;
+    }
+
+    .plan > dd {
+        height: 0;
+        overflow: hidden;
+        padding:0 !important;
+
+        opacity: 0;
+        filter: alpha(opacity=0); /* IE6-IE8 */
+        -webkit-transition: opacity 0.9s ease-in-out;
+        -moz-transition: opacity 0.9s ease-in-out;
+        -o-transition: opacity 0.9s ease-in-out;
+        -ms-transition: opacity 0.9s ease-in-out;
+        transition: opacity 0.9s ease-in-out;
+    }
+    .plan:target > dd{
+        padding: 10px 5px !important;
+        height: auto;
+        opacity: 1;
+        filter: alpha(opacity=100); /* IE6-IE8 */
+    }
+
+
+}
+
+
+/* #Mobile (Landscape)
+================================================== */
+
+/* Note: Design for a width of 480px */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    #pricing_plan4,#pricing_plan3,#pricing_plan2,#pricing_plan1{
+        width: 50%;
+
+    }
+
+    .plan_title{
+        width:auto;
+        float:none;
+        border-radius: 3px 3px 0 0;
+
+    }
+    .plan_price{
+        width:auto;
+        float:none;
+        border-top: 1px solid #F83333;
+
+    }
+    .plan_more{
+        display: none;
+    }
+
+
+    .plan > dd {
+        padding: 10px 5px !important;
+        height:auto;
+
+        opacity: 1;
+        filter: alpha(opacity=1); /* IE6-IE8 */
+        -webkit-transition: opacity 0.9s ease-in-out;
+        -moz-transition: opacity 0.9s ease-in-out;
+        -o-transition: opacity 0.9s ease-in-out;
+        -ms-transition: opacity 0.9s ease-in-out;
+        transition: opacity 0.9s ease-in-out;
+    }
+
+
+
+
+
+}     
