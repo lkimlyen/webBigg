@@ -1794,6 +1794,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\banner11349x400.jpg" />
     <Content Include="images\BehbehaniHamiltoBanner-1349x400.jpg" />
     <Content Include="images\slides\beautiful-701678_1280.jpg" />
     <Content Include="images\slides\flower-729514_1280.jpg" />
