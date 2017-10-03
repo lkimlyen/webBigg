@@ -1,0 +1,258 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - BiGG Global Administrator</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" type="text/css" href="~/assets/Admin/plugins/oneui-fw/css/bootstrap.min-1.4.css" />
+    <link rel="stylesheet" type="text/css" href="~/assets/Admin/plugins/oneui-fw/css/oneui.min-1.5.css" />
+    <link rel="stylesheet" type="text/css" href="~/assets/Admin/plugins/fancybox/source/jquery.fancybox.css" />
+    <link rel="stylesheet" type="text/css" href="~/assets/Admin/stylesheet/css.css" />
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    @*<script src="//cdn.tinymce.com/4/tinymce.js"></script>*@
+    @*<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>*@
+    @*<script src="~/tinymce/tinymce.min.js"></script>
+    <script src="~/tinymce/tinymce.js"></script>*@
+    @*<script>
+        tinymce.init({
+          selector: 'textarea',
+          height: 500,
+          plugins: [
+            'advlist autolink lists link image charmap print preview anchor',
+            'searchreplace visualblocks code fullscreen',
+            'insertdatetime media table contextmenu paste code'
+          ],
+
+
+
+
+          toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+          content_css: '//www.tinymce.com/css/codepen.min.css'
+        });</script>*@
+        @*<script>
+        tinymce.init({
+          selector: 'textarea',
+          height: 500,
+          plugins: [
+    "advlist autolink link image lists charmap print preview hr anchor pagebreak",
+    "searchreplace wordcount visualblocks visualchars insertdatetime media nonbreaking",
+    "table contextmenu directionality emoticons paste textcolor responsivefilemanager code"
+          ],
+
+          //plugins: [
+          //'advlist autolink lists link image charmap print preview anchor',
+          //'searchreplace visualblocks code fullscreen',
+          //'insertdatetime media table contextmenu paste code responsivefilemanager'
+            //],
+          //plugins: [
+          //"link image media anchor responsivefilemanager",
+          //"code"
+          //],
+
+          external_filemanager_path:"/filemanager/",
+          filemanager_title:"Responsive Filemanager" ,
+          external_plugins: { "filemanager" : "/filemanager/plugin.min.js"},
+       
+            toolbar1: "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | styleselect",
+        toolbar2: "| responsivefilemanager | link unlink anchor | image media | forecolor backcolor  | print preview code ",
+        image_advtab: true ,
+        relative_urls: false,
+
+          //toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+          //content_css: '//www.tinymce.com/css/codepen.min.css'
+        });</script>*@
+@*<script>
+    tinymce.init({
+    selector: "textarea",width: 680,height: 300,
+    plugins: [
+    "advlist autolink link image lists charmap print preview hr anchor pagebreak",
+    "searchreplace wordcount visualblocks visualchars insertdatetime media nonbreaking",
+    "table contextmenu directionality emoticons paste textcolor responsivefilemanager code"
+    ],
+
+    toolbar1: "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | styleselect",
+    toolbar2: "| responsivefilemanager | link unlink anchor | image media | forecolor backcolor  | print preview code ",
+    image_advtab: true ,
+
+    external_filemanager_path:"/filemanager/",
+    filemanager_title:"Responsive Filemanager" ,
+    external_plugins: { "filemanager" : "/filemanager/plugin.min.js"}
+    });
+    </script>*@
+
+    <script src="~/ckfinder/ckfinder.js"></script>
+    <script src="~/ckeditor/ckeditor.js"></script>
+</head>
+<body>
+
+    <div id="page-loader"></div>
+    <div id="page-container" class="sidebar-l sidebar-o side-scroll header-navbar-fixed">
+        <nav id="sidebar">
+            <div id="sidebar-scroll">
+                <div class="sidebar-content">
+                    <div class="side-header side-content bg-white-op">
+                        <button class="btn btn-link text-gray pull-right hidden-md hidden-lg" type="button" data-toggle="layout" data-action="sidebar_close">
+                            <i class="fa fa-times"></i>
+                        </button>
+                        <a class="h5 text-white" href="">
+                            <img src="" class="img-responsive" style="max-width: 155px; max-height: 36px" />
+                        </a>
+                    </div>
+                    <div class="side-content">
+                        <ul class="nav-main">
+                            <!-- home -->
+                            <li>
+                                <a href="@Url.Action("Index","Admin")">
+                                    <i class="si si-home"></i>
+                                    <span class="sidebar-mini-hide">Trang chủ</span>
+                                </a>
+                            </li>
+                            <!-- admin management -->
+                            @*<li>
+                                    <a href="@Url.Action("adminManagementView","Admin")">
+                                        <i class="fa fa-users"></i>
+                                        <span class="sidebar-mini-hide">Quản lý admin</span>
+                                    </a>
+                                </li>*@
+                            <!-- shop information -->
+                            <li>
+                                <a href="@Url.Action("shopInformationEdit","Shop")">
+                                    <i class="fa fa-table"></i>
+                                    <span class="sidebar-mini-hide">Thông tin shop</span>
+                                </a>
+                            </li>
+                            <!-- information -->
+                            <li>
+                                <a href="@Url.Action("informationView","Information")">
+                                    <i class="fa fa-book"></i>
+                                    <span class="sidebar-mini-hide">Thông tin</span>
+                                </a>
+                            </li>
+                            <!-- header -->
+                            <li>
+                                <a href="@Url.Action("headerEdit","Header")">
+                                    <i class="fa fa-television"></i>
+                                    <span class="sidebar-mini-hide">Header</span>
+                                </a>
+                            </li>
+
+                            <!-- produtcs category -->
+                            <li>
+                                <a href="#" class="nav-submenu" data-toggle="nav-submenu">
+                                    <i class="si si-grid"></i>
+                                    <span class="sidebar-mini-hide">Sản phẩm</span>
+                                </a>
+                                <ul>
+                                    <li>
+                                        @Html.ActionLink("Danh mục", "itemCategoryView", "ItemCategory")
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Danh sách sản phẩm", "itemView", "Item")
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- produtcs -->
+                            <li>
+                                <a href="@Url.Action("newsView","News")">
+                                    <i class="si si-list"></i>
+                                    <span class="sidebar-mini-hide">Tin tức</span>
+                                </a>
+                            </li>
+                            <!-- member -->
+                            <li>
+                                <a href="@Url.Action("MemberView","Member")">
+                                    <i class="fa fa-smile-o"></i>
+                                    <span class="sidebar-mini-hide">Khách hàng</span>
+                                </a>
+                            </li>
+                            <!-- orders -->
+                            <li>
+                                <a href="@Url.Action("OrderView","Order")">
+                                    <i class="fa fa-truck"></i>
+                                    <span class="sidebar-mini-hide">Đơn hàng</span>
+                                </a>
+                            </li>
+                            <!-- css -->
+                            <li>
+                                <a href="@Url.Action("cssEdit","Css")">
+                                    <i class="fa fa-bell"></i>
+                                    <span class="sidebar-mini-hide">Tùy chỉnh CSS</span>
+                                </a>
+                            </li>
+
+                        </ul><!-- end .nav-main -->
+                    </div><!-- end .side-content -->
+                </div><!-- end .sidebar-content -->
+            </div><!-- end #sidebar-scroll -->
+        </nav><!-- end #sidebar -->
+        <header id="header-navbar" class="content-mini content-mini-full">
+            <ul class="nav-header pull-right">
+                <li>
+                    <div class="btn-group">
+                        <button class="btn btn-default btn-image">
+                            <img src="~/assets/Admin/images/no-avatar.png" alt="avatar" />
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li class="dropdown-header">Tùy chọn</li>
+                            <li>
+                                @Html.ActionLink("Thoát", "Logout", "Admin")
+
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <ul class="nav-header pull-left">
+                <li class="hidden-md hidden-lg">
+                    <button class="btn btn-default" data-toggle="layout" data-action="sidebar_toggle" type="button">
+                        <i class="fa fa-navicon"></i>
+                    </button>
+                </li>
+                <li class="hidden-xs hidden-sm">
+                    <button class="btn btn-default" data-toggle="layout" data-action="sidebar_mini_toggle" type="button">
+                        <i class="fa fa-ellipsis-v"></i>
+                    </button>
+                </li>
+                <li class="quick-login-website">
+                    <button class="btn btn-info" onclick="window.open('@Url.Action("Index","Home")','_blank')">
+                        Truy cập nhanh website
+                        <i class="fa fa-external-link"></i>
+                    </button>
+                </li>
+            </ul>
+        </header><!-- end #header-navbar -->
+        <main id="main-container" style="min-height: 663px;">
+            @RenderBody()
+        </main>
+        <footer id="page-footer" class="content-mini content-mini-full font-s12 bg-gray-lighter clearfix">
+            <div class="pull-right">
+
+            </div>
+            <div class="pull-left">
+                Copyright &copy; 2016. <a href="">Thủy hải sản Cà Mau</a>
+            </div>
+        </footer><!-- end #page-footer -->
+    </div>
+    <script type="text/javascript" src="~/assets/Admin/plugins/oneui-fw/js/oneui.min-1.4.js"></script>
+    <script type="text/javascript" src="~/assets/Admin/plugins/fancybox/source/jquery.fancybox.js"></script>
+    @*<script type="text/javascript" src="~/assets/Admin/plugins/tinymce/tinymce.min.js"></script>
+        <script type="text/javascript" src="~/assets/Admin/plugins/tinymce/tinymce.config.js"></script>*@
+    <script type="text/javascript" src="~/assets/Admin/javascript/jquery.number.min.js"></script>
+    <script type="text/javascript" src="~/assets/Admin/javascript/custom.js"></script>
+    <script type="text/javascript" src="~/assets/Admin/javascript/admin.js"></script>
+    @*<script src="~/assets/plugins/tinymce/js/tinymce/tinymce.min.js"></script>*@
+    @*<script>
+        tinymce.init({
+            theme: "advanced",
+            mode: "textareas",
+            plugins : "autolink,lists,spellchecker,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template"
+
+        });</script>*@
+</body>
+</html>
