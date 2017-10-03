@@ -1,4 +1,4 @@
-﻿@model webanhnguyen.Models.tbl_admin
+﻿@model WebBigg.Models.tbl_Admin
 @{
     ViewBag.Title = "Admin";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
@@ -19,14 +19,7 @@
     <div class="block">
         <div class="block-content">
             <form method="post" name="frmForm" enctype="multipart/form-data" class="form-horizontal">
-                <div class="form-group">
-                    <label class="col-sm-3 control-label">
-                        Username <font color="red">*</font>
-                    </label>
-                    <div class="col-sm-6">
-                        <input type="text" name="username" class="form-control" value="@Model.Username" />
-                    </div>
-                </div>
+                
                 <div class="form-group">
                     <label class="col-sm-3 control-label">
                         Password <font color="red">*</font>
@@ -35,28 +28,7 @@
                         <input type="password" name="password" class="form-control" value="@Model.Password" />
                     </div>
                 </div>
-                <div class="form-group">
-                    <label class="col-sm-3 control-label">
-                        Quyền <font color="red">*</font>
-                    </label>
-                    <div class="col-sm-6">
-                        <select name="priority" class="form-control" id="menu_parent_id_@Model.Username">
-                            @if (Model.Priority == 1)
-                            {
-                                @Html.Raw("<option value='0'>Chọn quyền</option><option value='1'  selected='selected'>Admin</option><option value='2'>Super admin</option>");
-                            }
-                            else if (Model.Priority == 2)
-                            {
-                                @Html.Raw("<option value='0'>Chọn quyền</option><option value='1'>Admin</option><option value='2' selected='selected'>Super admin</option>");
-                            }
-                            else
-                            {
-                                @Html.Raw("<option value='0'>Chọn quyền</option><option value='1'>Admin</option><option value='2'>Super admin</option>");
-                            }
-                        </select>
-                    </div>
-                </div>
-
+                
                 <div class="form-group">
                     <div class="col-sm-offset-4 col-sm-4 btn-gr">
                         <button type="submit" name="btnSave" class="btn btn-default">Chấp nhận</button>

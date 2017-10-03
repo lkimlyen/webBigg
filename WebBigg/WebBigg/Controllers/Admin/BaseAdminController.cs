@@ -4,14 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
-using webanhnguyen.Models;
+using WebBigg.Models;
 
-namespace webanhnguyen.Controllers
+namespace WebBigg.Controllers
 {
     [ActionExcuted]
     public abstract class BaseAdminController : Controller
     {
-        public databaseDataContext data = new databaseDataContext();
+        public BiGGDataDataContext data = new BiGGDataDataContext();
     }
 
     public class ActionExcutedAttribute : ActionFilterAttribute

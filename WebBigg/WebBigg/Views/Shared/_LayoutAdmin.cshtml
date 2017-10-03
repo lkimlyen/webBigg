@@ -113,78 +113,58 @@
                                 </a>
                             </li>
                             <!-- admin management -->
-                            @*<li>
-                                    <a href="@Url.Action("adminManagementView","Admin")">
+                            <li>
+                                    <a href="@Url.Action("adminManagementEdit","Admin")">
                                         <i class="fa fa-users"></i>
                                         <span class="sidebar-mini-hide">Quản lý admin</span>
                                     </a>
-                                </li>*@
+                                </li>
                             <!-- shop information -->
                             <li>
-                                <a href="@Url.Action("shopInformationEdit","Shop")">
+                                <a href="@Url.Action("generalSettingsEdit","Setting")">
                                     <i class="fa fa-table"></i>
-                                    <span class="sidebar-mini-hide">Thông tin shop</span>
+                                    <span class="sidebar-mini-hide">Thiết lập chung</span>
                                 </a>
                             </li>
-                            <!-- information -->
-                            <li>
-                                <a href="@Url.Action("informationView","Information")">
-                                    <i class="fa fa-book"></i>
-                                    <span class="sidebar-mini-hide">Thông tin</span>
-                                </a>
-                            </li>
+                            
                             <!-- header -->
                             <li>
                                 <a href="@Url.Action("headerEdit","Header")">
                                     <i class="fa fa-television"></i>
-                                    <span class="sidebar-mini-hide">Header</span>
+                                    <span class="sidebar-mini-hide">Đầu trang</span>
                                 </a>
                             </li>
 
-                            <!-- produtcs category -->
+                            <!-- footer -->
                             <li>
-                                <a href="#" class="nav-submenu" data-toggle="nav-submenu">
-                                    <i class="si si-grid"></i>
-                                    <span class="sidebar-mini-hide">Sản phẩm</span>
+                                <a href="@Url.Action("footerEdit","Footer")">
+                                    <i class="fa fa-book"></i>
+                                    <span class="sidebar-mini-hide">Chân trang</span>
                                 </a>
-                                <ul>
-                                    <li>
-                                        @Html.ActionLink("Danh mục", "itemCategoryView", "ItemCategory")
-                                    </li>
-                                    <li>
-                                        @Html.ActionLink("Danh sách sản phẩm", "itemView", "Item")
-                                    </li>
-                                </ul>
                             </li>
-                            <!-- produtcs -->
+                            <!-- Slider -->
                             <li>
-                                <a href="@Url.Action("newsView","News")">
+                                <a href="@Url.Action("sliderEdit","Slider")">
                                     <i class="si si-list"></i>
-                                    <span class="sidebar-mini-hide">Tin tức</span>
+                                    <span class="sidebar-mini-hide">Slider</span>
                                 </a>
                             </li>
-                            <!-- member -->
+                            <!-- project -->
                             <li>
-                                <a href="@Url.Action("MemberView","Member")">
-                                    <i class="fa fa-smile-o"></i>
-                                    <span class="sidebar-mini-hide">Khách hàng</span>
-                                </a>
-                            </li>
-                            <!-- orders -->
-                            <li>
-                                <a href="@Url.Action("OrderView","Order")">
+                                <a href="@Url.Action("projectView","Project")">
                                     <i class="fa fa-truck"></i>
-                                    <span class="sidebar-mini-hide">Đơn hàng</span>
+                                    <span class="sidebar-mini-hide">Project</span>
                                 </a>
-                            </li>
-                            <!-- css -->
+                            </li>    
+                        <!-- Partner_Brand -->
                             <li>
-                                <a href="@Url.Action("cssEdit","Css")">
-                                    <i class="fa fa-bell"></i>
-                                    <span class="sidebar-mini-hide">Tùy chỉnh CSS</span>
+                                <a href="@Url.Action("partnerBrandView","PartnerBrand")">
+                                    <i class="fa fa-smile-o"></i>
+                                    <span class="sidebar-mini-hide">Đối tác - Thương hiệu</span>
                                 </a>
                             </li>
-
+                            
+                           
                         </ul><!-- end .nav-main -->
                     </div><!-- end .side-content -->
                 </div><!-- end .sidebar-content -->
@@ -235,7 +215,7 @@
 
             </div>
             <div class="pull-left">
-                Copyright &copy; 2016. <a href="">Thủy hải sản Cà Mau</a>
+                Copyright &copy; 2017. <a href="">BiGG Global</a>
             </div>
         </footer><!-- end #page-footer -->
     </div>
